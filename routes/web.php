@@ -20,3 +20,12 @@ Route::get('/dangky', function () {
 Route::get('/game', function () {
     return view('game');
 });
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/login', function () {
+        return view('admin.login');
+    });
+    Route::get('/manage', function () {
+        return view('admin.manage');
+    });
+});
